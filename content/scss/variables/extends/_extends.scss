@@ -1,0 +1,36 @@
+.spacing-unit--under {
+	margin-bottom: $spacing-unit;
+}
+
+.padding-unit--right {
+	padding-right: $spacing-unit;
+}
+
+.float--right {
+	float: right;
+}
+
+.float--left {
+	float: left;
+}
+
+.text--center {
+	text-align: center;
+}
+
+.cf {
+	clear: both;
+
+	&:after {
+		content: '';
+		clear: both;
+		display: block;
+	}
+
+}
+
+.hide--palm {
+	@media all and (max-width: $mobile) {
+		display: none;
+	}
+}

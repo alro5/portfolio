@@ -1,0 +1,28 @@
+footer {
+	$footerHeight: 60px;
+
+	@include pos(null null 0 0);
+	@include transition(all, 0.5s, cubic-bezier(.95,.31,.12,.87));
+	height: $footerHeight;
+	width: 100%;
+	background: darken($color--primary, 5%);
+	text-align: center;
+	line-height: $footerHeight;
+	font-family: $ff--base;
+	color: white;
+
+	address {
+		@media all and (max-width: $mobile) {
+			font-size: ($font-size--tiny - 1px);
+		}
+	}
+
+	&.active {
+		&.active {
+			$navWidth: 250px;
+
+			@include transform(translateX($navWidth));
+			@include transition(all, 0.5s, cubic-bezier(.95,.31,.12,.87));
+		}
+	}
+}

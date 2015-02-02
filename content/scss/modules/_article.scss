@@ -1,0 +1,40 @@
+article {
+	float: left;
+	height: 100%;
+
+	header {
+		padding: 10px 20px;
+		border-bottom: 1px solid lightgrey;
+		h2 {
+			margin: 0;
+			display: inline-block;
+		}
+	}
+
+	.inner {
+		padding 	: 20px;
+		overflow-y 	: auto;
+		height: calc(100% - 54px);
+		text-align: center;
+	}
+
+	.box {
+		float: left;
+		width: 50%;
+		img {
+			max-width: 500px;
+			display: block;
+			margin: auto;
+		}
+	}
+
+	i {
+		float: right;
+		margin-top: 10px;
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+}

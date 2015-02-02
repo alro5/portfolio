@@ -1,0 +1,92 @@
+.item {
+	text-align 			: center;
+	display 			: table;
+	width 				: 25%;
+	height 				: 100%;
+	color 				: white;
+	text-transform 		: uppercase;
+	cursor 				: pointer; 
+	@include transition(all, 0.5s, cubic-bezier(.95,.31,.12,.87));
+
+	&:hover {
+		@include transition(all, 0.5s, cubic-bezier(.95,.31,.12,.87));
+		background: #222;
+	}
+
+	&:first-child {
+		@include pos(0 75% 0 0);
+		background: orange;
+	}
+
+	&:nth-child(2) {
+		@include pos(0 50% 0 25%);
+		background: cornflowerblue;
+	}
+
+	&:nth-child(3) {
+		@include pos(0 25% 0 50%);
+		background: indianred;
+	}
+
+	&:nth-child(4) {
+		@include pos(0 0% 0 75%);
+		background: lightgreen;
+	}
+
+	&:after {
+		content: '';
+		display: block;
+		width: 20px;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: auto;
+		bottom: 0;
+		background-image: -moz-radial-gradient(center,ellipse cover,rgba(0,0,0,.3) 0,rgba(0,0,0,0) 70%);
+		background-image: -o-radial-gradient(center,ellipse cover,rgba(0,0,0,.3) 0,rgba(0,0,0,0) 70%);
+		background-image: -webkit-radial-gradient(center,ellipse cover,rgba(0,0,0,.3) 0,rgba(0,0,0,0) 70%);
+		background-image: radial-gradient(center,ellipse cover,rgba(0,0,0,.3) 0,rgba(0,0,0,0) 70%);
+		background-image: -ms-radial-gradient(center,ellipse cover,rgba(0,0,0,.3) 0,transparent 70%);
+		overflow: hidden;
+		background-position: -10px center;
+		background-repeat: no-repeat;
+	}
+
+	header {
+		display 		: table-cell;
+		vertical-align 	: middle;
+	}
+
+	i {
+		font-size  		: 70px; 
+	}
+
+}
+
+.item__content {
+	@include pos(0 0 0 0);
+	@include transition(all, 0.5s, cubic-bezier(.95,.31,.12,.87));
+	z-index: 1;
+	background: rgb(244, 244, 244);
+	transform: scale(0);
+	opacity: 0;
+	z-index: 1000;
+	overflow: hidden;
+
+	&.active {
+		@include transition(all, 0.5s, cubic-bezier(.95,.31,.12,.87));
+		transform: scale(1);
+		opacity: 1;
+	}
+
+}
+
+.item__description {
+	height 		: 100%;
+	padding 	: 30px;
+	color: white;
+	h2 {
+		margin: 0 0 40px;
+	}
+}
