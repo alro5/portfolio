@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 591 491.6" enable-background="new 0 0 591 491.6" xml:space="preserve">
+	 viewBox="0 0 591 556.3" enable-background="new 0 0 591 556.3" xml:space="preserve">
 <g>
-	<path id="Trekant" fill="#030000" d="M419.3,239.8L294.5,30L169.7,239.8L44.9,449.6h249.6h249.6L419.3,239.8z M99.2,426.3
+	<path id="Trekant" fill="#355BA1" d="M419.3,239.8L294.5,30L169.7,239.8L44.9,449.6h249.6h249.6L419.3,239.8z M99.2,426.3
 		l97.6-169.1l97.6-169.1l97.6,169.1l97.6,169.1H294.5H99.2z"/>
-	<polyline id="A" fill="#030000" points="336.4,316.2 270.8,203.3 294.5,161.6 430.8,396.9 382.6,396.9 359.8,358.6 229.7,358.9 
+	<polyline id="A" fill="#2D91BE" points="336.4,316.2 270.8,203.3 294.5,161.6 430.8,396.9 382.6,396.9 359.8,358.6 229.7,358.9 
 		207.9,396.9 160,396.9 205.6,316.5 	"/>
 </g>
+<rect x="44.8" y="467.8" fill="none" width="521" height="91.5"/>
+<text transform="matrix(1 0 0 1 44.75 528.637)" fill="#2D91BE" font-family="'OpenSans'" font-size="80" letter-spacing="13">ATOMIC IT</text>
 </svg>

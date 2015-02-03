@@ -18,11 +18,16 @@ article {
 		text-align: center;
 	}
 
+	.row {
+		width: 100%;
+		float: left;
+	}
+
 	.box {
 		float: left;
-		width: 50%;
+		width: 25%;
 		img {
-			max-width: 500px;
+			max-width: 306px;
 			display: block;
 			margin: auto;
 		}

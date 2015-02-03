@@ -8,6 +8,11 @@
 	cursor 				: pointer; 
 	@include transition(all, 0.5s, cubic-bezier(.95,.31,.12,.87));
 
+	.tileOpen & {
+		pointer-events: none;
+		z-index: 0;
+	}
+
 	&:hover {
 		@include transition(all, 0.5s, cubic-bezier(.95,.31,.12,.87));
 		background: #222;
@@ -65,14 +70,13 @@
 }
 
 .item__content {
-	@include pos(0 0 0 0);
+	@include pos(0 0 0 0, fixed);
 	@include transition(all, 0.5s, cubic-bezier(.95,.31,.12,.87));
 	z-index: 1;
 	background: rgb(244, 244, 244);
 	transform: scale(0);
 	opacity: 0;
 	z-index: 1000;
-	overflow: hidden;
 
 	&.active {
 		@include transition(all, 0.5s, cubic-bezier(.95,.31,.12,.87));
@@ -85,8 +89,9 @@
 .item__description {
 	height 		: 100%;
 	padding 	: 30px;
+	overflow-y: auto;
 	color: white;
 	h2 {
-		margin: 0 0 40px;
+		margin: 0 0 10px;
 	}
 }

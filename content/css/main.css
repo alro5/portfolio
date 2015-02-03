@@ -3233,8 +3233,14 @@ table {
 /*
 	Modules
 */
+.main {
+  position: relative;
+  z-index: 0;
+}
+
 section {
   height: 100%;
+  overflow-y: auto;
 }
 section aside {
   float: left;
@@ -3303,6 +3309,10 @@ footer.active.active {
   -webkit-transition: all, 0.5s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
   transition: all, 0.5s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
 }
+.tileOpen .item {
+  pointer-events: none;
+  z-index: 0;
+}
 .item:hover {
   -moz-transition: all, 0.5s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
   -o-transition: all, 0.5s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
@@ -3370,7 +3380,7 @@ footer.active.active {
 }
 
 .item__content {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -3384,7 +3394,6 @@ footer.active.active {
   transform: scale(0);
   opacity: 0;
   z-index: 1000;
-  overflow: hidden;
 }
 .item__content.active {
   -moz-transition: all, 0.5s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
@@ -3398,10 +3407,11 @@ footer.active.active {
 .item__description {
   height: 100%;
   padding: 30px;
+  overflow-y: auto;
   color: white;
 }
 .item__description h2 {
-  margin: 0 0 40px;
+  margin: 0 0 10px;
 }
 
 article {
@@ -3422,12 +3432,16 @@ article .inner {
   height: calc(100% - 54px);
   text-align: center;
 }
+article .row {
+  width: 100%;
+  float: left;
+}
 article .box {
   float: left;
-  width: 50%;
+  width: 25%;
 }
 article .box img {
-  max-width: 500px;
+  max-width: 306px;
   display: block;
   margin: auto;
 }
