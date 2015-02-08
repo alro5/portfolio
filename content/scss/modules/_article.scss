@@ -1,6 +1,6 @@
 article {
 	float: left;
-	height: 100%;
+	border-left: 1px solid lightgrey;
 
 	header {
 		padding: 10px 20px;
@@ -13,8 +13,6 @@ article {
 
 	.inner {
 		padding 	: 20px;
-		overflow-y 	: auto;
-		height: calc(100% - 54px);
 		text-align: center;
 	}
 

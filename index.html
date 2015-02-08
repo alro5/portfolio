@@ -10,153 +10,200 @@
 	<script type="text/javascript" src="dist/main.min.js"></script>
 </head>
 <body ng-class="{ 'tileOpen' : graphicdesign || typografi || workflow || billedbehandling }">
-	<div ng-click="graphicdesign = !graphicdesign" class="item">
-		<header>
-			<h2>Grafisk Design</h2>
-			<i class="icon-droplet"></i> 
-		</header>	
-	</div>
-	<div ng-click="typografi = !typografi" class="item">
-		<header>
-			<h2>Typografi &amp; Ombrydning</h2>
-			<i class="icon-pencil"></i>
-		</header>
-	</div>
-	<div class="item">
-		<header>
-			<h2>Grafik &amp; Billedbehandling</h2>
-			<i class="icon-images"></i>
-		</header>
-	</div>
-	<div ng-click="workflow = !workflow" class="item">
-		<header>
-			<h2>Grafisk Workflow</h2>
-			<i class="icon-embed"></i>
-		</header>
-	</div>
+	
+	<nav>
+		<ul>
+			<li 
+				ng-class="{ 'active' : graphicdesign }" 
+				ng-click="graphicdesign = true; typografi = false; billedbehandling = false; workflow = false;">
+				<h2>
+					Grafisk Design
+					<i class="icon-droplet"></i>
+				</h2>
+			</li>
+			<li 
+				ng-class="{ 'active' : typografi }" 
+				ng-click="typografi = true; billedbehandling = false; graphicdesign = false; workflow = false;">
+				<h2>
+					Typografi &amp; Ombrydning
+					<i class="icon-pen"></i>
+				</h2>
+			</li>
+			<li 
+				ng-class="{ 'active' : billedbehandling }" 
+				ng-click="billedbehandling = true; graphicdesign = false; typografi = false; workflow = false;">
+				<h2>
+					Grafik &amp; Billedbehandling
+					<i class="icon-image2"></i>
+				</h2>
+			</li>
+			<li 
+				ng-class="{ 'active' : workflow }" 
+				ng-click="workflow = true; graphicdesign = false; typografi = false; billedbehandling = false;">
+				<h2>
+					Grafisk Workflow
+					<i class="icon-code"></i>
+				</h2>
+			</li>
+		</ul>
+	</nav>
+	<main>
 	<div ng-class="{ 'active' : typografi }" class="item__content">
-		<section>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum orci vel pellentesque euismod. In sodales, enim sed bibendum egestas, metus mi tincidunt urna, vitae euismod nisl turpis eu leo. Nulla dictum aliquet nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean ac tellus quis lorem ultrices gravida ac sit amet libero. Suspendisse in eleifend orci, id aliquam mi. Sed volutpat iaculis erat. Sed bibendum facilisis ante, in accumsan quam hendrerit ac. Vestibulum in porttitor felis. Etiam a feugiat eros. Curabitur euismod lorem sed nulla pulvinar, tincidunt suscipit arcu tempor. Quisque luctus nibh nunc, venenatis accumsan quam egestas eget. Donec eget nisi nunc. Aenean quis mi purus. Ut a mi nec erat accumsan rhoncus.
+		<aside class="one-third">
+			<div class="item__description">
+				<h2>Opgaven:</h2>
+				<p>PFA MitPFA</p>
+				<p>Kunde: PFA Pension</p>
+				<p>PFA MitPFA er PFA's svar på netbank. En webapplikation hvor PFA's kunder kan logge ind og tjekke deres pension og ordninger.</p>
+				<p>Kundens ønske var at få en moderne webapplikation optimeret på alle kanter og leder. Applikationen skulle performe hurtigt og flydende på alle platforme og størrelser.</p>
+				<p>Ufordringen her var at få sitet til at være responsivt i forhold til alle skærmstørrelser.</p>
 
-				Nunc pharetra risus efficitur aliquet tempus. Nunc rutrum et nulla eget posuere. Donec rhoncus, augue vel fringilla elementum, eros eros cursus ipsum, nec eleifend sem sapien at ligula. Quisque pellentesque a enim at lobortis. Sed eu justo eleifend, gravida turpis ut, sodales velit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla aliquet blandit ligula eget eleifend. Praesent mollis quam at lacinia volutpat. Duis ornare imperdiet luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut ac libero quis est vestibulum fermentum ut eu nisi. Cras tellus dolor, placerat sit amet varius eget, pulvinar quis dolor.
+				<h2>IDÉ:</h2>
+				<p>Jeg løste opgaven med et mobile first approach; dvs. at jeg optimerede sidens layout til mobile-devices som det første. Derefter tog jeg fat i optimering til tablets som det næste led i rækken.</p>
+				
+				<h2>Udførsel:</h2>
+				<p>Det ovennævnte javascript bibliotek er kaldet <a target="_blank" href="https://angularjs.org/">AngularJS</a></p>
+			</div>
+		</aside>
+		<article class="two-thirds">
+			<header>
+				<h2>Typografi &amp; ombrydning</h2>
+				<i ng-click="workflow = false" class="icon-close"></i>
+			</header>
+			<div class="inner">
 
-				Sed eget magna ac massa maximus accumsan. Phasellus imperdiet ac augue et laoreet. Nam dolor ante, iaculis in sapien at, lacinia pellentesque velit. Mauris vel placerat sem. Proin ultrices, mi mattis hendrerit vulputate, ipsum magna elementum ligula, non dapibus augue est suscipit elit. Aliquam tempor vehicula porta. Morbi suscipit orci nec elit facilisis, eu tincidunt eros bibendum. Pellentesque eu lacus quis justo faucibus vulputate. Vivamus condimentum euismod sapien, et molestie quam imperdiet eget. Praesent pretium lacus ac eros placerat tincidunt. Nam pharetra auctor neque, vitae tincidunt nunc venenatis quis. Duis congue vitae ex nec congue. Donec in auctor nunc. Morbi a justo enim. Aenean convallis ultricies placerat.
+			</div>
+		</article>
+	</div>
+	<div ng-class="{ 'active' : billedbehandling }" class="item__content">
+		<aside class="one-third">
+			<div class="item__description">
+				<h2>Opgaven:</h2>
+				<p>PFA MitPFA</p>
+				<p>Kunde: PFA Pension</p>
+				<p>PFA MitPFA er PFA's svar på netbank. En webapplikation hvor PFA's kunder kan logge ind og tjekke deres pension og ordninger.</p>
+				<p>Kundens ønske var at få en moderne webapplikation optimeret på alle kanter og leder. Applikationen skulle performe hurtigt og flydende med minimal ventetid.</p>
+				<p>Udfordringen her lå i, at undgå sideskift og læse alt indhold ind med det samme. Sideskift (page reload) har altid været standard måden at navigerer på et website, og det kan være meget tidskrævende at læse hele siden ind igen, hver gang man skifter.</p>
 
-				Nunc hendrerit massa fermentum, consectetur augue eget, porttitor nisi. Nunc ac ipsum sem. Nullam vel risus euismod, faucibus nibh sit amet, bibendum sapien. Vestibulum ac lectus ac arcu varius ultrices eu sed tellus. Proin vitae ipsum condimentum, laoreet urna non, sollicitudin mi. Nullam at lorem venenatis, iaculis magna ac, varius neque. Aliquam tempus mollis libero, id cursus nisi faucibus nec. Nunc consectetur metus quis leo consequat, quis volutpat enim semper. Donec commodo quam eu placerat aliquam. Sed id ex mauris. Etiam nec efficitur sem, id blandit enim. Nam varius, velit sit amet bibendum tristique, erat mi maximus turpis, quis tempor dolor mauris fermentum tortor. Ut mollis dui ut lorem iaculis, convallis rutrum ligula tincidunt.
+				<h2>IDÉ:</h2>
+				<p>Jeg løste opgaven ved bruge et externt javascript bibliotek som kan tage hånd om disse udfordring med sideskift og loadhastigheder. Jeg vidste der fandtes et værktøj som dette, som var netop god til den slags opgaver, og fandt hurtigt ud af det var det rigtige at bruge for netop denne løsning.</p>
+				
+				<h2>Udførsel:</h2>
+				<p>Det ovennævnte javascript bibliotek er kaldet <a target="_blank" href="https://angularjs.org/">AngularJS</a></p>
+				
+			</div>
+		</aside>
+		<article class="two-thirds">
+			<header>
+				<h2>Typografi &amp; ombrydning</h2>
+				<i ng-click="workflow = false" class="icon-close"></i>
+			</header>
+			<div class="inner">
 
-				Suspendisse tristique at diam eget aliquet. Praesent vel gravida lectus, ut tempor orci. Duis bibendum sapien risus, ut semper enim porttitor eu. In commodo neque ac lectus vestibulum facilisis. Pellentesque malesuada nibh elit, vel tempus massa tempus vel. Sed molestie tincidunt dictum. Aenean nibh neque, porta non porta bibendum, blandit sed libero. Nam ullamcorper, eros vitae rhoncus dapibus, lectus nunc sollicitudin nunc, id ultricies purus purus vitae lacus. Cras quis velit in dui vestibulum gravida id at magna. Nunc sagittis euismod rhoncus. Morbi aliquet felis sit amet tincidunt condimentum. Aliquam laoreet tempor eleifend. Nulla viverra vulputate facilisis. Mauris consequat ante libero. Donec eleifend risus convallis consequat auctor.
-			</p>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum orci vel pellentesque euismod. In sodales, enim sed bibendum egestas, metus mi tincidunt urna, vitae euismod nisl turpis eu leo. Nulla dictum aliquet nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean ac tellus quis lorem ultrices gravida ac sit amet libero. Suspendisse in eleifend orci, id aliquam mi. Sed volutpat iaculis erat. Sed bibendum facilisis ante, in accumsan quam hendrerit ac. Vestibulum in porttitor felis. Etiam a feugiat eros. Curabitur euismod lorem sed nulla pulvinar, tincidunt suscipit arcu tempor. Quisque luctus nibh nunc, venenatis accumsan quam egestas eget. Donec eget nisi nunc. Aenean quis mi purus. Ut a mi nec erat accumsan rhoncus.
-
-				Nunc pharetra risus efficitur aliquet tempus. Nunc rutrum et nulla eget posuere. Donec rhoncus, augue vel fringilla elementum, eros eros cursus ipsum, nec eleifend sem sapien at ligula. Quisque pellentesque a enim at lobortis. Sed eu justo eleifend, gravida turpis ut, sodales velit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla aliquet blandit ligula eget eleifend. Praesent mollis quam at lacinia volutpat. Duis ornare imperdiet luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut ac libero quis est vestibulum fermentum ut eu nisi. Cras tellus dolor, placerat sit amet varius eget, pulvinar quis dolor.
-
-				Sed eget magna ac massa maximus accumsan. Phasellus imperdiet ac augue et laoreet. Nam dolor ante, iaculis in sapien at, lacinia pellentesque velit. Mauris vel placerat sem. Proin ultrices, mi mattis hendrerit vulputate, ipsum magna elementum ligula, non dapibus augue est suscipit elit. Aliquam tempor vehicula porta. Morbi suscipit orci nec elit facilisis, eu tincidunt eros bibendum. Pellentesque eu lacus quis justo faucibus vulputate. Vivamus condimentum euismod sapien, et molestie quam imperdiet eget. Praesent pretium lacus ac eros placerat tincidunt. Nam pharetra auctor neque, vitae tincidunt nunc venenatis quis. Duis congue vitae ex nec congue. Donec in auctor nunc. Morbi a justo enim. Aenean convallis ultricies placerat.
-
-				Nunc hendrerit massa fermentum, consectetur augue eget, porttitor nisi. Nunc ac ipsum sem. Nullam vel risus euismod, faucibus nibh sit amet, bibendum sapien. Vestibulum ac lectus ac arcu varius ultrices eu sed tellus. Proin vitae ipsum condimentum, laoreet urna non, sollicitudin mi. Nullam at lorem venenatis, iaculis magna ac, varius neque. Aliquam tempus mollis libero, id cursus nisi faucibus nec. Nunc consectetur metus quis leo consequat, quis volutpat enim semper. Donec commodo quam eu placerat aliquam. Sed id ex mauris. Etiam nec efficitur sem, id blandit enim. Nam varius, velit sit amet bibendum tristique, erat mi maximus turpis, quis tempor dolor mauris fermentum tortor. Ut mollis dui ut lorem iaculis, convallis rutrum ligula tincidunt.
-
-				Suspendisse tristique at diam eget aliquet. Praesent vel gravida lectus, ut tempor orci. Duis bibendum sapien risus, ut semper enim porttitor eu. In commodo neque ac lectus vestibulum facilisis. Pellentesque malesuada nibh elit, vel tempus massa tempus vel. Sed molestie tincidunt dictum. Aenean nibh neque, porta non porta bibendum, blandit sed libero. Nam ullamcorper, eros vitae rhoncus dapibus, lectus nunc sollicitudin nunc, id ultricies purus purus vitae lacus. Cras quis velit in dui vestibulum gravida id at magna. Nunc sagittis euismod rhoncus. Morbi aliquet felis sit amet tincidunt condimentum. Aliquam laoreet tempor eleifend. Nulla viverra vulputate facilisis. Mauris consequat ante libero. Donec eleifend risus convallis consequat auctor.
-			</p>
-
-		</section>
+			</div>
+		</article>
 	</div>
 	<div ng-class="{ 'active' : workflow }" class="item__content">
-		<section>
-			<aside class="one-third">
-				<div class="item__description graphicdesign">
-					<h2>Opgaven:</h2>
-					<p>PFA MitPFA</p>
-					<p>Kunde: PFA Pension</p>
-					<p>PFA MitPFA er PFA's svar på netbank. En webapplikation hvor PFA's kunder kan logge ind og tjekke deres pension og ordninger.</p>
-					<p>Kundens ønske var at få en moderne webapplikation optimeret på alle kanter og leder. Applikationen skulle performe hurtigt og flydende med minimal ventetid.</p>
-					<p>Udfordringen her lå i, at undgå sideskift og læse alt indhold ind med det samme. Sideskift (page reload) har altid været standard måden at navigerer på et website, og det kan være meget tidskrævende at læse hele siden ind igen, hver gang man skifter.</p>
+		<aside class="one-third">
+			<div class="item__description">
+				<h2>Opgaven:</h2>
+				<p>PFA MitPFA</p>
+				<p>Kunde: PFA Pension</p>
+				<p>PFA MitPFA er PFA's svar på netbank. En webapplikation hvor PFA's kunder kan logge ind og tjekke deres pension og ordninger.</p>
+				<p>Kundens ønske var at få en moderne webapplikation optimeret på alle kanter og leder. Applikationen skulle performe hurtigt og flydende på alle platforme og størrelser.</p>
+				<p>Ufordringen her var at få sitet til at være responsivt i forhold til alle skærmstørrelser.</p>
 
-					<h2>IDÉ:</h2>
-					<p>Jeg løste opgaven ved bruge et externt javascript bibliotek som kan tage hånd om disse udfordring med sideskift og loadhastigheder. Jeg vidste der fandtes et værktøj som dette, som var netop god til den slags opgaver, og fandt hurtigt ud af det var det rigtige at bruge for netop denne løsning.</p>
-					
-					<h2>Udførsel:</h2>
-					<p>Det ovennævnte javascript bibliotek er kaldet <a target="_blank" href="https://angularjs.org/">AngularJS</a></p>
-					
-				</div>
-			</aside>
-			<article class="two-thirds">
-				<header>
-					<h2>Workflow</h2>
-					<i ng-click="workflow = false" class="icon-close"></i>
-				</header>
-				<div class="inner">
-
-				</div>
-			</article>
-		</section>
+				<h2>IDÉ:</h2>
+				<p>Jeg løste opgaven med et mobile first approach; dvs. at jeg optimerede sidens layout til mobile-devices som det første. Derefter tog jeg fat i optimering til tablets som det næste led i rækken og derefter computer skærme.</p>
+				
+				<h2>Udførsel:</h2>
+				<p>Jeg løste opgaven vha. CSS3 <a target="_blank" href="http://css-tricks.com/css-media-queries/">media-queries</a>. Derudover brugte jeg SCSS som preprocessor til CSS.</p>
+				<p>Nedenstående er en række breakpoints som jeg har brugt for at løse opgaven.</p>
+				<img src="content/images/wf-screen--2.png" />
+				<p>Eksempel:</p>
+				<img src="content/images/wf-screen--1.png" />
+			</div>
+		</aside>
+		<article class="two-thirds">
+			<header>
+				<h2>Workflow</h2>
+				<i ng-click="workflow = false" class="icon-close"></i>
+			</header>
+			<div class="inner">
+				<p>Mobile</p>
+				<img src="content/images/wf-mockup--1.png" />
+				<p>Tablet</p>
+				<img src="content/images/wf-mockup--2.png" />
+				<p>Desktop</p>
+				<img src="content/images/wf-mockup--3.png" />
+			</div>
+		</article>
 	</div>
-	<div ng-class="{ 'active' : graphicdesign }" class="item__content">
-		<section>
-			<aside class="one-third">
-				<div class="item__description graphicdesign">
-					<h2>Opgaven:</h2>
-					<p>Fiktiv opgave - Redesign af logo</p>
-					<p>Kunde: Atomic IT</p>
-					<p>Kundens profil: En virksomhed som producerer webapplikationer. Virksomheden vil gerne fremstå proffesionelle og enkel.</p>
-					<p>Kundens ønske var at få et logo som utrykte professionalisme, modernisme på en minimalistisk måde.</p>
-					<h2>IDÉ:</h2>
-					<p>Kunden havde understreget at de tre ovenstående begreber skulle indgå i logoet på en eller anden måde (professionalisme, modernisme og minimalisme), så det var der jeg startede.
-					Den trekantede form symboliserer de tre begreber kunden ønskede. De strømlinede linjer mellem "A'et" og trekanten understreger igen kundens ønske om professionalisme og enkelthed.
-					"A'et" i Atomic IT er blevet en del af logoet, og fungerer som en del af genkendeligheden.</p>
-					<h2>Udførsel:</h2>
-					<p>Dette logoet er fremstillet vha. programmerne Illustrator og Photoshop</p>
-					<p>Logoet er designet ud fra "A'et" form. Trekanten omkring følger "A'ets" linjer. Dette er opnået vha. pentool og pathfinder. (Billedet nedenfor viser styrepunkterne anvendt i logoet)</p>
-					<img src="content/images/gd-screen--3.png" />
-					<p>"A'ets" form er opnået med pathfinder i Illustrator, hvor trekanten omkring er brugt i mindre størrelse for at fjerne "A'ets" ene side. (Se billedet nedenfor)</p>
-					<img src="content/images/gd-screen--4.png" />
-					<p><b>Farver</b></p>
-					<img src="content/images/gd-screen--2.png" />
+	<div ng-init="graphicdesign = true" ng-class="{ 'active' : graphicdesign }" class="item__content">
+		<aside class="one-third">
+			<div class="item__description">
+				<h2>Opgaven:</h2>
+				<p>Fiktiv opgave - Redesign af logo</p>
+				<p>Kunde: Atomic IT</p>
+				<p>Kundens profil: En virksomhed som producerer webapplikationer. Virksomheden vil gerne fremstå proffesionelle og enkel.</p>
+				<p>Kundens ønske var at få et logo som utrykte professionalisme, modernisme på en minimalistisk måde.</p>
+				<h2>IDÉ:</h2>
+				<p>Kunden havde understreget at de tre ovenstående begreber skulle indgå i logoet på en eller anden måde (professionalisme, modernisme og minimalisme), så det var der jeg startede.
+				Den trekantede form symboliserer de tre begreber kunden ønskede. De strømlinede linjer mellem "A'et" og trekanten understreger igen kundens ønske om professionalisme og enkelthed.
+				"A'et" i Atomic IT er blevet en del af logoet, og fungerer som en del af genkendeligheden.</p>
+				<h2>Udførsel:</h2>
+				<p>Dette logoet er fremstillet vha. programmerne Illustrator og Photoshop</p>
+				<p>Logoet er designet ud fra "A'et" form. Trekanten omkring følger "A'ets" linjer. Dette er opnået vha. pentool og pathfinder. (Billedet nedenfor viser styrepunkterne anvendt i logoet)</p>
+				<img src="content/images/gd-screen--3.png" />
+				<p>"A'ets" form er opnået med pathfinder i Illustrator, hvor trekanten omkring er brugt i mindre størrelse for at fjerne "A'ets" ene side. (Se billedet nedenfor)</p>
+				<img src="content/images/gd-screen--4.png" />
+				<p><b>Farver</b></p>
+				<img src="content/images/gd-screen--2.png" />
+			</div>
+		</aside>
+		<article class="two-thirds">
+			<header>
+				<h2>Grafisk design</h2>
+				<i ng-click="graphicdesign = false" class="icon-close"></i>
+			</header>
+			<div class="inner">
+				<div class="box">
+					<p>Logo standard</p>
+					<img src="content/images/logo.svg" />
 				</div>
-			</aside>
-			<article class="two-thirds">
-				<header>
-					<h2>Grafisk design</h2>
-					<i ng-click="graphicdesign = false" class="icon-close"></i>
-				</header>
-				<div class="inner">
-					<div class="box">
-						<p>Logo standard</p>
-						<img src="content/images/logo.svg" />
-					</div>
-					<div class="box">
-						<p>Logo gråtoner</p>
-						<img src="content/images/logo--greyscale.svg" />
-					</div>
-					<div class="box">
-						<p>Logo sort</p>
-						<img src="content/images/logo--black.svg" />
-					</div>
-					<div class="row">
-						<div class="box">
-							<p>Logo uden navn</p>
-							<img src="content/images/logo--notext.svg" />
-						</div>
-						<div class="box">
-							<p>&nbsp;</p>
-							<img style="max-width: 200px;" src="content/images/logo--notext.svg" />
-						</div>
-						<div class="box">
-							<p>&nbsp;</p>
-							<img style="max-width: 100px;" src="content/images/logo--notext.svg" />
-						</div>
-						<div class="box">
-							<p>&nbsp;</p>
-							<img style="max-width: 50px;" src="content/images/logo--notext.svg" />
-						</div>
-					</div>
-					<div class="cf"></div>
-					<p>Mock-ups</p>
-					<img src="content/images/iphone-mockups.jpg" />
-					<img src="content/images/businesscard-mockups.png" />
+				<div class="box">
+					<p>Logo gråtoner</p>
+					<img src="content/images/logo--greyscale.svg" />
 				</div>
-			</article>
-		</section>
-	</div>
+				<div class="box">
+					<p>Logo sort</p>
+					<img src="content/images/logo--black.svg" />
+				</div>
+				<div class="row">
+					<div class="box">
+						<p>Logo uden navn</p>
+						<img src="content/images/logo--notext.svg" />
+					</div>
+					<div class="box">
+						<p>&nbsp;</p>
+						<img style="max-width: 200px;" src="content/images/logo--notext.svg" />
+					</div>
+					<div class="box">
+						<p>&nbsp;</p>
+						<img style="max-width: 100px;" src="content/images/logo--notext.svg" />
+					</div>
+					<div class="box">
+						<p>&nbsp;</p>
+						<img style="max-width: 50px;" src="content/images/logo--notext.svg" />
+					</div>
+				</div>
+				<div class="cf"></div>
+				<p>Mock-ups</p>
+				<img src="content/images/iphone-mockups.jpg" />
+				<img src="content/images/businesscard-mockups.png" />
+			</div>
+		</article>
+		</div>
+	</main>
 </body>
 </html>

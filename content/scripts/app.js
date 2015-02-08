@@ -1,8 +1,8 @@
 var app = angular.module("portfolio", []);
 
-$(function() {
-	$('.item').click(function() {
-	    $(".inner").focus()
-	    console.log("clicked");
+$(function(){
+	$('nav ul li').click(function() {
+	  $("html, body").animate({ scrollTop: 0 }, "fast");
+	  return false;
 	});
 });

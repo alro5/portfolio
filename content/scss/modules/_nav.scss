@@ -1,0 +1,46 @@
+nav {
+	width 		: 250px;
+	height 		: 100%;
+	@include pos(0 null 0 null, fixed);
+	background: #333;
+
+	ul {
+		padding: 0;
+		margin: 0;
+		height: 100%;
+		li {
+			list-style-type: none;
+			color: white;
+			cursor: pointer;
+			height: 25.5%;
+			display: table;
+			width: 100%;
+			border-bottom: 1px solid #120404;
+			@include transition(all, 0.7s, cubic-bezier(.95,.31,.12,.87));
+			&.active {
+				background: white;
+				color: black;
+				@include transition(all, 0.7s, cubic-bezier(.95,.31,.12,.87));
+			}
+			&:hover {
+				&:not(.active) {
+					background: #3D3D3D;
+				}
+			}
+			h2 {
+				text-align: center;
+				display: table-cell;
+				vertical-align: middle;
+				margin: 0;
+				@include user-select(none);
+				font-size: 20px;
+				text-transform: uppercase;
+				i {
+					display: block;
+					margin: 10px 0;
+					font-size: 30px;
+				}
+			}
+		}
+	}
+}
