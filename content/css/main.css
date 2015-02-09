@@ -3384,6 +3384,10 @@ footer.active.active {
   color: 333;
 }
 
+.item__description img {
+  max-width: 100%;
+}
+
 article {
   float: left;
   border-left: 1px solid lightgrey;
