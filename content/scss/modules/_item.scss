@@ -7,19 +7,23 @@
 	&.active {
 		@include transform(scale(1,1));
 		@include transition(all, 0.7s, cubic-bezier(.95,.31,.12,.87));
-		
-
 		opacity: 1;
 	}
 
 	h2 {
+		margin: 0 0;
+		color: #333;
+	}
+
+	p {
 		margin-top: 0;
-		color: 333;
 	}
 
 }
 
 .item__description {
+	pointer-events: all;
+	@include transition(all, 0.7s, cubic-bezier(.95,.31,.12,.87));
 	img {
 		max-width: 100%;
 	}

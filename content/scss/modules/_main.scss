@@ -9,4 +9,31 @@ main {
 aside {
 	float 		: left;
 	padding 	: 20px;
+	opacity 	: 1;
+	position: relative;
+	max-width: 1000px;
+	@include transition(all, 0.7s, cubic-bezier(.95,.31,.12,.87));
+	
+	i {
+		cursor: pointer;
+		@include pos(null 15px null null);
+	}
+
+	&.closed {
+
+		@include transition(all, 0.7s, cubic-bezier(.95,.31,.12,.87));
+		max-width: 45px;
+		padding: 20px 0;
+		i {
+			&:before {
+				content: "\e6b7";
+			}
+		}
+		.item__description {
+			opacity: 0;
+			pointer-events: none;
+			display: none;
+			@include transition(all, 0.7s, cubic-bezier(.95,.31,.12,.87));
+		}
+	}
 }

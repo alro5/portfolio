@@ -71,6 +71,7 @@ html {
     -webkit-text-size-adjust: 100%; /* 2 */
     -ms-text-size-adjust: 100%; /* 2 */
     height: 100%; 
+    @include scrollbar(1em, #333);
 }
 
 /*
@@ -81,7 +82,7 @@ body {
     margin: 0;
     background: white;
     min-height: 100%;
-    @include scrollbar(1em, #333);
+    
     overflow-y: scroll;
     height: 100%;
 }

@@ -1,6 +1,11 @@
 article {
 	float: left;
 	border-left: 1px solid lightgrey;
+	@include transition(all, 0.7s, cubic-bezier(.95,.31,.12,.87));
+
+	&.full--width {
+		width: calc(100% - 45px) !important;
+	}
 
 	header {
 		padding: 10px 20px;
@@ -13,7 +18,6 @@ article {
 
 	.inner {
 		padding 	: 20px;
-		text-align: center;
 	}
 
 	.row {
@@ -23,9 +27,9 @@ article {
 
 	.box {
 		float: left;
-		width: 25%;
+		width: 50%;
 		img {
-			max-width: 306px;
+			max-width: 100%;
 			display: block;
 			margin: auto;
 		}
@@ -38,6 +42,7 @@ article {
 
 	img {
 		max-width: 100%;
+		margin-bottom: 20px;
 	}
 
 }

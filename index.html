@@ -49,12 +49,13 @@
 	</nav>
 	<main>
 	<div ng-class="{ 'active' : typografi }" class="item__content">
-		<aside class="one-third">
+		<aside ng-class="{ 'closed' : typoinfo }" class="one-third">
+			<i ng-click="typoinfo = !typoinfo" class="icon-close"></i>
 			<div class="item__description">
 				<h2>Opgaven:</h2>
 				<p>To fiktive opslag til et sportsmagasin.</p>
 				<p>Handler om vigtigheden i en rigtig kost i forbindelse med træning.</p>
-				<p>Opslaget skulle indholde relevante og blikfangede billeder. Derudover skulle der undgås at have et standard spalte layout - der skulle være en form for dynamik i opsætning.</p>
+				<p>Opslaget skulle indholde relevante og blikfangende billeder. Derudover skulle der undgås at have et standard spalte layout - der skulle være en form for dynamik i opsætning.</p>
 
 				<h2>IDÉ:</h2>
 				<p>Jeg løste opgaven i InDesign. Jeg startede med opsætningen af selve dokumentet.</p>
@@ -62,13 +63,11 @@
 					4 siders opslag <br />
 					Størrelse: 200mm x 280mm <br />
 					3mm til beskæring <br />
-					Grid: 6 kolonner og 5 rækker<br /><br />
-
-					Master: Pagina
+					Grid: 6 kolonner og 5 rækker
 				</p>
-				<p>Paragraph styles</p>
+				<p><strong>Paragraph styles</strong></p>
 				<img src="content/images/typo-screen--1.png" />
-				<p>Baseline og grid</p>
+				<p><strong>Baseline og grid</strong></p>
 				<img src="content/images/baseline-grid-info.png" />
 				<img src="content/images/baseline-grid.png" />
 			</div>
@@ -76,7 +75,6 @@
 		<article class="two-thirds">
 			<header>
 				<h2>Typografi &amp; ombrydning</h2>
-				<i ng-click="workflow = false" class="icon-close"></i>
 			</header>
 			<div class="inner">
 				<p>Side 1-2</p>
@@ -89,7 +87,8 @@
 		</article>
 	</div>
 	<div ng-class="{ 'active' : billedbehandling }" class="item__content">
-		<aside class="one-third">
+		<aside ng-class="{ 'closed' : bbinfo }" class="one-third">
+			<i ng-click="bbinfo = !bbinfo" class="icon-close"></i>	
 			<div class="item__description">
 				<h2>Opgaven:</h2>
 				<p>Fiktiv opgave</p>
@@ -114,7 +113,6 @@
 		<article class="two-thirds">
 			<header>
 				<h2>Grafik &amp; billedbehandling</h2>
-				<i ng-click="workflow = false" class="icon-close"></i>
 			</header>
 			<div class="inner">
 				<img src="content/images/sammenkopiering-1.jpg" />
@@ -124,7 +122,8 @@
 		</article>
 	</div>
 	<div ng-class="{ 'active' : workflow }" class="item__content">
-		<aside class="one-third">
+		<aside ng-class="{ 'closed' : workflowinfo }" class="one-third">
+			<i ng-click="workflowinfo = !workflowinfo" class="icon-close"></i>
 			<div class="item__description">
 				<h2>Opgaven:</h2>
 				<p>PFA MitPFA</p>
@@ -147,7 +146,6 @@
 		<article class="two-thirds">
 			<header>
 				<h2>Workflow</h2>
-				<i ng-click="workflow = false" class="icon-close"></i>
 			</header>
 			<div class="inner">
 				<p>Mobile</p>
@@ -160,68 +158,46 @@
 		</article>
 	</div>
 	<div ng-init="graphicdesign = true" ng-class="{ 'active' : graphicdesign }" class="item__content">
-		<aside class="one-third">
-			<div class="item__description">
-				<h2>Opgaven:</h2>
-				<p>Fiktiv opgave - Redesign af logo</p>
-				<p>Kunde: Atomic IT</p>
-				<p>Kundens profil: En virksomhed som producerer webapplikationer. Virksomheden vil gerne fremstå proffesionelle og enkel.</p>
-				<p>Kundens ønske var at få et logo som utrykte professionalisme, modernisme på en minimalistisk måde.</p>
+		<aside ng-class="{ 'closed' : graphicinfo }" class="one-third">
+			<i ng-click="graphicinfo = !graphicinfo" class="icon-close"></i>
+			<div class="item__description">	
 				<h2>IDÉ:</h2>
-				<p>Kunden havde understreget at de tre ovenstående begreber skulle indgå i logoet på en eller anden måde (professionalisme, modernisme og minimalisme), så det var der jeg startede.
-				Den trekantede form symboliserer de tre begreber kunden ønskede. De strømlinede linjer mellem "A'et" og trekanten understreger igen kundens ønske om professionalisme og enkelthed.
-				"A'et" i Atomic IT er blevet en del af logoet, og fungerer som en del af genkendeligheden.</p>
+				<p><strong>Kunde:</strong> Atomic IT (Fiktiv opgave)</p>
+				<p><strong>Kundens profil:</strong> En virksomhed som producerer webapplikationer og apps. Virksomheden vil gerne fremstå proffesionel og enkel.</p>
+				<p>Kundens ønske var at få et website som utrykte professionalisme, modernisme på en minimalistisk måde.</p>
+				<p>Kunden havde understreget at de tre ovenstående begreber skulle indgå i websitet på en eller anden måde (professionalisme, modernisme og minimalisme), så det var der jeg startede.</p>
 				<h2>Udførsel:</h2>
-				<p>Dette logoet er fremstillet vha. programmerne Illustrator og Photoshop</p>
-				<p>Logoet er designet ud fra "A'et" form. Trekanten omkring følger "A'ets" linjer. Dette er opnået vha. pentool og pathfinder. (Billedet nedenfor viser styrepunkterne anvendt i logoet)</p>
-				<img src="content/images/gd-screen--3.png" />
-				<p>"A'ets" form er opnået med pathfinder i Illustrator, hvor trekanten omkring er brugt i mindre størrelse for at fjerne "A'ets" ene side. (Se billedet nedenfor)</p>
-				<img src="content/images/gd-screen--4.png" />
-				<p><b>Farver</b></p>
-				<img src="content/images/gd-screen--2.png" />
+				<p><strong>Programmer:</strong> Photoshop og Illustrator</p>
+				<p>Jeg startede med at finde inspiration til opgaven. Jeg ledte efter websites der havde et "app-lignende" design, da det passede på kundens profil. Til højre er nogle billeder af forskellige websites jeg fundet inspiration fra.</p>
+				<p>Efterfølgende begyndte jeg at sætte designet op i Photoshop (wireframes mm). Jeg har anvendt et 12 kolonners grid til at styre sitets layout.</p>
+				<p>Layoutet er bygget op med dette grid, for at gøre det lettere at skalere siden ifht. alle skærmstørrelser.</p>
 			</div>
 		</aside>
 		<article class="two-thirds">
 			<header>
 				<h2>Grafisk design</h2>
-				<i ng-click="graphicdesign = false" class="icon-close"></i>
 			</header>
 			<div class="inner">
-				<div class="box">
-					<p>Logo standard</p>
-					<img src="content/images/logo.svg" />
-				</div>
-				<div class="box">
-					<p>Logo gråtoner</p>
-					<img src="content/images/logo--greyscale.svg" />
-				</div>
-				<div class="box">
-					<p>Logo sort</p>
-					<img src="content/images/logo--black.svg" />
-				</div>
+				<p><strong>Designet</strong></p>
+				<img src="content/images/gd-screen-website.jpg" />
+				<p><strong>Inspiration</strong></p>
+				<img src="content/images/gd-screen-inspiration.jpg" />
 				<div class="row">
 					<div class="box">
-						<p>Logo uden navn</p>
-						<img src="content/images/logo--notext.svg" />
+						<p><strong>Wireframe</strong></p>
+						<img src="content/images/gd-screen-wireframe.png" />
 					</div>
 					<div class="box">
-						<p>&nbsp;</p>
-						<img style="max-width: 200px;" src="content/images/logo--notext.svg" />
-					</div>
-					<div class="box">
-						<p>&nbsp;</p>
-						<img style="max-width: 100px;" src="content/images/logo--notext.svg" />
-					</div>
-					<div class="box">
-						<p>&nbsp;</p>
-						<img style="max-width: 50px;" src="content/images/logo--notext.svg" />
+						<p><strong>Grid</strong></p>
+						<img src="content/images/gd-screen-grid.jpg" />
 					</div>
 				</div>
-				<div class="cf"></div>
-				<p>Mock-ups</p>
-				<img src="content/images/iphone-mockups.jpg" />
-				<img src="content/images/businesscard-mockups.png" />
-			</div>
+				
+				<p><strong>Font</strong></p>
+				<img src="content/images/gd-screen-font.jpg" />
+				<p><strong>Farver</strong></p>
+				<img src="content/images/gd-screen-farver.jpg" />
+			</div>	
 		</article>
 		</div>
 	</main>

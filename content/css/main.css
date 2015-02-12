@@ -2917,6 +2917,20 @@ html {
   /* 2 */
   height: 100%;
 }
+html ::-webkit-scrollbar {
+  width: 1em;
+  height: 1em;
+}
+html ::-webkit-scrollbar-thumb {
+  background: #333;
+}
+html ::-webkit-scrollbar-track {
+  background: #737373;
+}
+html body {
+  scrollbar-face-color: #333;
+  scrollbar-track-color: #737373;
+}
 
 /*
  * Remove default margin.
@@ -2927,20 +2941,6 @@ body {
   min-height: 100%;
   overflow-y: scroll;
   height: 100%;
-}
-body ::-webkit-scrollbar {
-  width: 1em;
-  height: 1em;
-}
-body ::-webkit-scrollbar-thumb {
-  background: #333;
-}
-body ::-webkit-scrollbar-track {
-  background: #737373;
-}
-body body {
-  scrollbar-face-color: #333;
-  scrollbar-track-color: #737373;
 }
 
 /* ==========================================================================
@@ -3262,8 +3262,8 @@ nav ul li {
   transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
 }
 nav ul li.active {
-  background: white;
-  color: black;
+  background: #3aadff;
+  color: white;
   -moz-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
   -o-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
   -webkit-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
@@ -3301,6 +3301,38 @@ main {
 aside {
   float: left;
   padding: 20px;
+  opacity: 1;
+  position: relative;
+  max-width: 1000px;
+  -moz-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
+  -o-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
+  -webkit-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
+  transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
+}
+aside i {
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+}
+aside.closed {
+  -moz-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
+  -o-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
+  -webkit-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
+  transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
+  max-width: 45px;
+  padding: 20px 0;
+}
+aside.closed i:before {
+  content: "\e6b7";
+}
+aside.closed .item__description {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+  -moz-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
+  -o-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
+  -webkit-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
+  transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
 }
 
 .logo {
@@ -3380,10 +3412,20 @@ footer.active.active {
   opacity: 1;
 }
 .item__content h2 {
+  margin: 0 0;
+  color: #333;
+}
+.item__content p {
   margin-top: 0;
-  color: 333;
 }
 
+.item__description {
+  pointer-events: all;
+  -moz-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
+  -o-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
+  -webkit-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
+  transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
+}
 .item__description img {
   max-width: 100%;
 }
@@ -3391,6 +3433,13 @@ footer.active.active {
 article {
   float: left;
   border-left: 1px solid lightgrey;
+  -moz-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
+  -o-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
+  -webkit-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
+  transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
+}
+article.full--width {
+  width: calc(100% - 45px) !important;
 }
 article header {
   padding: 10px 20px;
@@ -3402,7 +3451,6 @@ article header h2 {
 }
 article .inner {
   padding: 20px;
-  text-align: center;
 }
 article .row {
   width: 100%;
@@ -3410,10 +3458,10 @@ article .row {
 }
 article .box {
   float: left;
-  width: 25%;
+  width: 50%;
 }
 article .box img {
-  max-width: 306px;
+  max-width: 100%;
   display: block;
   margin: auto;
 }
@@ -3423,6 +3471,7 @@ article i {
 }
 article img {
   max-width: 100%;
+  margin-bottom: 20px;
 }
 
 @keyframes pulsate {
