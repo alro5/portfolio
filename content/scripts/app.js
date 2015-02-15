@@ -6,3 +6,9 @@ $(function(){
 	  return false;
 	});
 });
+
+$(function(){
+	setTimeout(function(){
+        $("body").removeClass("preloader--active");
+     }, 3000)
+});

@@ -1,7 +1,7 @@
 article {
 	float: left;
 	border-left: 1px solid lightgrey;
-	@include transition(all, 0.7s, cubic-bezier(.95,.31,.12,.87));
+	@include transition(all 0.7s ease);
 
 	&.full--width {
 		width: calc(100% - 45px) !important;

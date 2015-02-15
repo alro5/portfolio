@@ -5,12 +5,20 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" media="screen" href="content/css/main.css" />
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
 	<script type="text/javascript" src="dist/main.min.js"></script>
 </head>
-<body ng-class="{ 'tileOpen' : graphicdesign || typografi || workflow || billedbehandling }">
-	
+<body class="preloader--active" ng-class="{ 'tileOpen' : graphicdesign || typografi || workflow || billedbehandling }">
+	<div class="preloader">
+		<header>
+			<h1>Alexander Rothschild</h1>
+			<h3>Svendeprøve 2015 // Mediegrafiker</h3>
+			<div class="signal">	
+			</div>
+		</header>
+	</div>
 	<nav>
 		<ul>
 			<li 
@@ -57,19 +65,31 @@
 				<p>Handler om vigtigheden i en rigtig kost i forbindelse med træning.</p>
 				<p>Opslaget skulle indholde relevante og blikfangende billeder. Derudover skulle der undgås at have et standard spalte layout - der skulle være en form for dynamik i opsætning.</p>
 
-				<h2>IDÉ:</h2>
-				<p>Jeg løste opgaven i InDesign. Jeg startede med opsætningen af selve dokumentet.</p>
+				<h2>Idé:</h2>
 				<p><strong>Format:</strong> <br />
 					4 siders opslag <br />
 					Størrelse: 200mm x 280mm <br />
 					3mm til beskæring <br />
 					Grid: 6 kolonner og 5 rækker
 				</p>
-				<p><strong>Paragraph styles</strong></p>
+				<h2>Udførsel:</h2>
+				<p><strong>Programmer:</strong></p>
+				<img src="content/images/ps-icon.png" />
+				<img src="content/images/id-icon.png" />
+				<p><strong>Oprettelse af paragraph styles</strong></p>
 				<img src="content/images/typo-screen--1.png" />
 				<p><strong>Baseline og grid</strong></p>
 				<img src="content/images/baseline-grid-info.png" />
 				<img src="content/images/baseline-grid.png" />
+				<p><strong>Lille i prøve &amp; justering</strong></p>
+				<img src="content/images/lille-i.png" />
+				<img src="content/images/justering.png" />
+				<p><strong>Udregning af mellemrubrik</strong></p>
+				<p>Brødtekstens linjeafstand gange 2, minus mellemrubrikens linjeafstand.</p>
+				<p style="font-style: italic;">11 pkt. x 2 pkt. = 22 pkt. <br />
+				22 pkt. - 12 pkt. = 10 pkt</p>
+				<p>Herefter fordeles 10 pkt. over og under, m. 2/3 af luften over og 1/3 under:</p>
+				<p><strong>7 pkt. over og 3 pkt. under</strong></p>
 			</div>
 		</aside>
 		<article class="two-thirds">
@@ -91,23 +111,40 @@
 			<i ng-click="bbinfo = !bbinfo" class="icon-close"></i>	
 			<div class="item__description">
 				<h2>Opgaven:</h2>
-				<p>Fiktiv opgave</p>
-				<p>Sammenkopiering af to billeder.</p>
-				<p>Fritlægning af snowboarderen i billedet til venstre, og kopieret ham på det til højre.</p>
+				<p>(Fiktiv opgave)</p>
+				<p>En reklame for NASA's Beyond Earth program.</p>
 				
 				<h2>Udførsel:</h2>
+				<p><strong>Programmer:</strong></p>
+				<img src="content/images/ps-icon.png" />
 				<p><strong>Arbejdsmetoder:</strong> <br />
 					Pentool <br />
 					Selections <br />
 					Lag <br />
+					Camera Raw <br />
+					Lag effekter <br />
+					Blandings metoder <br />
 					Paths <br />
+					Filter effects <br />
 					Brushes
 				</p>
-				<p>Jeg løste opgaven i Photoshop, hvor jeg anvendte pentool til fritlægningen. Efter jeg havde lavet den path jeg skulle bruge, så havde jeg den selection som ses nedenfor.</p>
-				<img src="content/images/sammenkopiering-3.jpg" />
-				<p>Herefter kunne fritlægningen placeres på det andet billede. Dette gjordes simpelt med Move tool</p>
-				<p>Jeg tilføjede en skygge nederst i venstre hjørne på det nye billede, for at få et mere realistisk look. Dette gjorde jeg med Brush tool, med blandingsmetoden sat til "Overlay" og opaciteten sat til 15%, ligeledes feather værdien så skyggen ikke blev for "hård" i kanten.</p>
-				<p>Dernæst har jeg tilføjet noget sne - igen for at få et realistisk look. Dette gjorde jeg med brush tool.</p>
+				<p>Jeg startede med at lave planeten. Dette gjorde jeg vha. en ellipse shape, derefter tilføjede jeg lag effekter (se screenshot nedenfor). Indvendig glød til at skabe en mere realistisk og 3D lignende effekt, og udvendig glød til at supplere.</p>
+				<img src="content/images/lag-effekter.jpg" />
+
+				<p>Til planetens textur/overflade fandt jeg et billede (se screenshot nedenfor) jeg synes passede. Herefter placerede jeg det på min ellipse shape, og anvendte Photoshops's spherize effect til at understøtte kugle effekten.</p>
+				<img src="content/images/planet_3_d.png" />
+
+				<p>Efter dette trin tog brugte jeg Photoshop's Camera Raw filter til at justere overfladens farver. Jeg fremhævede de mørker steder i billedet, og gjorde de lyse steder i billedet varmere.</p>
+				
+				
+				<p>Skygge siden af planeten lavede jeg med brush tool, her benyttede jeg en blød brush med en opacitet på omrking 50% så skyggen ikke blev for kraftig.</p>
+				<p>Baggrunden har jeg lavet med nogle custom brushes.</p>
+
+				<p>Rumskibet har jeg fritlagt med pentool fra nedenstående billede.</p>
+				<img src="content/images/atlantis.jpg" />
+				<p>Efter</p>
+				<img src="content/images/atlantis-fritlagt.jpg" />
+				<p>Så mørklagde jeg fronten af rumskibet og tilføjede lys omkring raketten. Tilsidst tilføjede jeg bevægelsessløring vha. Photoshop's filtre, for at skabe en fornemmelse af hastighed/fart.</p>
 			</div>
 		</aside>
 		<article class="two-thirds">
@@ -115,9 +152,7 @@
 				<h2>Grafik &amp; billedbehandling</h2>
 			</header>
 			<div class="inner">
-				<img src="content/images/sammenkopiering-1.jpg" />
-				<p>Sammenkopiering</p>
-				<img src="content/images/sammenkopiering.jpg" />
+				<img src="content/images/billedbehandling.jpg" />
 			</div>
 		</article>
 	</div>
@@ -132,9 +167,19 @@
 				<p>Kundens ønske var at få en moderne webapplikation optimeret på alle kanter og leder. Applikationen skulle performe hurtigt og flydende på alle platforme og størrelser.</p>
 				<p>Ufordringen her var at få sitet til at være responsivt i forhold til alle skærmstørrelser.</p>
 
-				<h2>IDÉ:</h2>
+				<h2>Idé:</h2>
 				<p>Jeg løste opgaven med et mobile first approach; dvs. at jeg optimerede sidens layout til mobile-devices som det første. Derefter tog jeg fat i optimering til tablets som det næste led i rækken og derefter computer skærme.</p>
 				
+				<h2>Proces:</h2>
+				<ol>
+					<li>Som det første mødtes vi med kunden til en samtale om, hvad der kan lade sig gøre i forhold til designet i praksis.</li>
+					<li>Efter det var afklaret begyndte en grafiker at lave de designs der var aftalt. Det første design der blev leveret til programmering var mobil-versionen af sitet, derefter iPad-versionen og computer-versionen.</li>
+					<li>Da de designs der skulle bruges var på plads, gik jeg igang med at kode sitet.</li>
+					<li>Kunden var med undervejs til at komme med evt. rettelser/kommentarer, så procesen var så hurtig så mulig.</li>
+					<li>Da sitet var sat op til alle nødvendige platforme, skulle sitet testet i forskellige browsere/devices.</li>
+					<li>Tilsidst var sitet på plads, og det blev uploadet til kundens server.</li>
+				</ol>
+
 				<h2>Udførsel:</h2>
 				<p>Jeg løste opgaven vha. CSS3 <a target="_blank" href="http://css-tricks.com/css-media-queries/">media-queries</a>. Derudover brugte jeg SCSS som preprocessor til CSS.</p>
 				<p>Nedenstående er en række breakpoints som jeg har brugt for at løse opgaven.</p>
@@ -148,7 +193,9 @@
 				<h2>Workflow</h2>
 			</header>
 			<div class="inner">
-				<p>Mobile</p>
+				<p><strong>Sitet:</strong></p>
+				<img src="content/images/workflow.jpg" />
+				<p><strong>Mobile</strong></p>
 				<img src="content/images/wf-mockup--1.png" />
 				<p>Tablet</p>
 				<img src="content/images/wf-mockup--2.png" />
@@ -161,16 +208,29 @@
 		<aside ng-class="{ 'closed' : graphicinfo }" class="one-third">
 			<i ng-click="graphicinfo = !graphicinfo" class="icon-close"></i>
 			<div class="item__description">	
-				<h2>IDÉ:</h2>
+				<h2>Idé:</h2>
 				<p><strong>Kunde:</strong> Atomic IT (Fiktiv opgave)</p>
 				<p><strong>Kundens profil:</strong> En virksomhed som producerer webapplikationer og apps. Virksomheden vil gerne fremstå proffesionel og enkel.</p>
 				<p>Kundens ønske var at få et website som utrykte professionalisme, modernisme på en minimalistisk måde.</p>
 				<p>Kunden havde understreget at de tre ovenstående begreber skulle indgå i websitet på en eller anden måde (professionalisme, modernisme og minimalisme), så det var der jeg startede.</p>
 				<h2>Udførsel:</h2>
-				<p><strong>Programmer:</strong> Photoshop og Illustrator</p>
+				<p><strong>Programmer:</strong></p>
+				<img src="content/images/ps-icon.png" />
+				<img src="content/images/il-icon.png" />
+
 				<p>Jeg startede med at finde inspiration til opgaven. Jeg ledte efter websites der havde et "app-lignende" design, da det passede på kundens profil. Til højre er nogle billeder af forskellige websites jeg fundet inspiration fra.</p>
 				<p>Efterfølgende begyndte jeg at sætte designet op i Photoshop (wireframes mm). Jeg har anvendt et 12 kolonners grid til at styre sitets layout.</p>
 				<p>Layoutet er bygget op med dette grid, for at gøre det lettere at skalere siden ifht. alle skærmstørrelser.</p>
+				<p><strong>Font:</strong></p>
+				<h1 style="font-size: 60px;color: #444;line-height: 55px;margin: 0 0 5px; text-indent: -2px; word-break: break-all;">MONTSERRAT</h1>
+				<p style="font-size: 20px; color: #444; margin-bottom: 3px;"><strong>The quick brown fox jumps over the lazy dog</strong> (bold)</p>
+				<p style="font-size: 20px; color: #444; margin-bottom: 3px;">The quick brown fox jumps over the lazy dog (20px)</p>
+				<p style="font-size: 18px; color: #444; margin-bottom: 3px;">The quick brown fox jumps over the lazy dog (18px)</p>
+				<p style="font-size: 16px; color: #444; margin-bottom: 3px;">The quick brown fox jumps over the lazy dog (16px)</p>
+				<p style="font-size: 14px; color: #444; margin-bottom: 3px;">The quick brown fox jumps over the lazy dog (14px)</p>
+				<p style="font-size: 12px; color: #444; margin-bottom: 20px;">The quick brown fox jumps over the lazy dog (12px)</p>
+				<p><strong>Farver:</strong></p>
+				<img src="content/images/gd-screen-farver.jpg" />
 			</div>
 		</aside>
 		<article class="two-thirds">
@@ -178,8 +238,10 @@
 				<h2>Grafisk design</h2>
 			</header>
 			<div class="inner">
-				<p><strong>Designet</strong></p>
+				<p><strong>Forsiden</strong></p>
 				<img src="content/images/gd-screen-website.jpg" />
+				<p><strong>Case side</strong></p>
+				<img src="content/images/grafisk-design-websitedesign-2.jpg" />
 				<p><strong>Inspiration</strong></p>
 				<img src="content/images/gd-screen-inspiration.jpg" />
 				<div class="row">
@@ -192,11 +254,6 @@
 						<img src="content/images/gd-screen-grid.jpg" />
 					</div>
 				</div>
-				
-				<p><strong>Font</strong></p>
-				<img src="content/images/gd-screen-font.jpg" />
-				<p><strong>Farver</strong></p>
-				<img src="content/images/gd-screen-farver.jpg" />
 			</div>	
 		</article>
 		</div>

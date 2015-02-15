@@ -82,9 +82,12 @@ body {
     margin: 0;
     background: white;
     min-height: 100%;
-    
     overflow-y: scroll;
     height: 100%;
+
+    &.preloader--active {
+      overflow-y: hidden;
+    }
 }
 
 /* ==========================================================================

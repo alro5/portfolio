@@ -4,6 +4,8 @@ main {
 	padding: 20px;
 	min-height: 100vh;
 	background: white;
+	height: 100%;
+	overflow: hidden;
 }
 
 aside {
@@ -12,7 +14,7 @@ aside {
 	opacity 	: 1;
 	position: relative;
 	max-width: 1000px;
-	@include transition(all, 0.7s, cubic-bezier(.95,.31,.12,.87));
+	@include transition(all 0.7s ease);
 	
 	i {
 		cursor: pointer;
@@ -21,7 +23,7 @@ aside {
 
 	&.closed {
 
-		@include transition(all, 0.7s, cubic-bezier(.95,.31,.12,.87));
+		@include transition(all 0.7s ease);
 		max-width: 45px;
 		padding: 20px 0;
 		i {
@@ -33,7 +35,7 @@ aside {
 			opacity: 0;
 			pointer-events: none;
 			display: none;
-			@include transition(all, 0.7s, cubic-bezier(.95,.31,.12,.87));
+			@include transition(all 0.7s ease);
 		}
 	}
 }

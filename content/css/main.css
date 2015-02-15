@@ -2942,6 +2942,9 @@ body {
   overflow-y: scroll;
   height: 100%;
 }
+body.preloader--active {
+  overflow-y: hidden;
+}
 
 /* ==========================================================================
    Links
@@ -3296,6 +3299,8 @@ main {
   padding: 20px;
   min-height: 100vh;
   background: white;
+  height: 100%;
+  overflow: hidden;
 }
 
 aside {
@@ -3304,10 +3309,10 @@ aside {
   opacity: 1;
   position: relative;
   max-width: 1000px;
-  -moz-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
-  -o-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
-  -webkit-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
-  transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
+  -moz-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
 }
 aside i {
   cursor: pointer;
@@ -3315,10 +3320,10 @@ aside i {
   right: 15px;
 }
 aside.closed {
-  -moz-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
-  -o-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
-  -webkit-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
-  transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
+  -moz-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
   max-width: 45px;
   padding: 20px 0;
 }
@@ -3329,10 +3334,10 @@ aside.closed .item__description {
   opacity: 0;
   pointer-events: none;
   display: none;
-  -moz-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
-  -o-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
-  -webkit-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
-  transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
+  -moz-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
 }
 
 .logo {
@@ -3394,10 +3399,10 @@ footer.active.active {
   -ms-transform: scale(0, 0);
   -webkit-transform: scale(0, 0);
   transform: scale(0, 0);
-  -moz-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
-  -o-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
-  -webkit-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
-  transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
+  -moz-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
   opacity: 0;
 }
 .item__content.active {
@@ -3405,10 +3410,10 @@ footer.active.active {
   -ms-transform: scale(1, 1);
   -webkit-transform: scale(1, 1);
   transform: scale(1, 1);
-  -moz-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
-  -o-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
-  -webkit-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
-  transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
+  -moz-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
   opacity: 1;
 }
 .item__content h2 {
@@ -3421,22 +3426,23 @@ footer.active.active {
 
 .item__description {
   pointer-events: all;
-  -moz-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
-  -o-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
-  -webkit-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
-  transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
+  -moz-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
 }
 .item__description img {
   max-width: 100%;
+  margin-bottom: 30px;
 }
 
 article {
   float: left;
   border-left: 1px solid lightgrey;
-  -moz-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
-  -o-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
-  -webkit-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
-  transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
+  -moz-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
 }
 article.full--width {
   width: calc(100% - 45px) !important;
@@ -3501,20 +3507,70 @@ article img {
   }
 }
 .signal {
-  border: 3px solid #fff;
+  border: 3px solid white;
   border-radius: 30px;
   width: 30px;
   height: 30px;
   margin: auto;
   opacity: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 250px;
   pointer-events: none;
   animation: pulsate 1s ease-out;
   animation-iteration-count: infinite;
   -webkit-animation: pulsate 1s ease-out;
   -webkit-animation-iteration-count: infinite;
+}
+
+.preloader {
+  -moz-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  -moz-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  -webkit-transform: scale(0, 0);
+  transform: scale(0, 0);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.preloader header {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+.preloader header h1 {
+  margin: 0;
+  color: #3aadff;
+  font-size: 60px;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.86);
+  line-height: 50px;
+}
+.preloader header h3 {
+  font-size: 37px;
+  margin-top: 0px;
+  color: white;
+}
+.preloader--active .preloader {
+  -moz-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #333;
+  z-index: 1;
+  opacity: 1;
 }
