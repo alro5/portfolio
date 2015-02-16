@@ -16,11 +16,11 @@ nav {
 			display: table;
 			width: 100%;
 			border-bottom: 1px solid #120404;
-			@include transition(all, 0.7s, cubic-bezier(.95,.31,.12,.87));
+			@include transition(all 0.7s ease);
 			&.active {
 				background: rgb(58, 173, 255);
 				color: white;
-				@include transition(all, 0.7s, cubic-bezier(.95,.31,.12,.87));
+				@include transition(all 0.7s ease);
 			}
 			&:hover {
 				&:not(.active) {
@@ -37,7 +37,7 @@ nav {
 				text-transform: uppercase;
 				i {
 					display: block;
-					margin: 10px 0;
+					margin: 10px 0 0;
 					font-size: 30px;
 				}
 			}

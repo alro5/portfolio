@@ -3259,18 +3259,18 @@ nav ul li {
   display: table;
   width: 100%;
   border-bottom: 1px solid #120404;
-  -moz-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
-  -o-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
-  -webkit-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
-  transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
+  -moz-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
 }
 nav ul li.active {
   background: #3aadff;
   color: white;
-  -moz-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
-  -o-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
-  -webkit-transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
-  transition: all, 0.7s, cubic-bezier(0.95, 0.31, 0.12, 0.87);
+  -moz-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
 }
 nav ul li:hover:not(.active) {
   background: #3D3D3D;
@@ -3289,7 +3289,7 @@ nav ul li h2 {
 }
 nav ul li h2 i {
   display: block;
-  margin: 10px 0;
+  margin: 10px 0 0;
   font-size: 30px;
 }
 
@@ -3483,6 +3483,8 @@ article img {
 @keyframes pulsate {
   0% {
     transform: scale(0.1);
+    -webkit-transform: scale(0.1);
+    -moz-transform: scale(0.1);
     opacity: 0.0;
   }
   50% {
@@ -3490,12 +3492,16 @@ article img {
   }
   100% {
     transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
     opacity: 0;
   }
 }
 @-webkit-keyframes pulsate {
   0% {
     transform: scale(0.1);
+    -webkit-transform: scale(0.1);
+    -moz-transform: scale(0.1);
     opacity: 0.0;
   }
   50% {
@@ -3503,6 +3509,8 @@ article img {
   }
   100% {
     transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
     opacity: 0;
   }
 }
@@ -3573,4 +3581,5 @@ article img {
   background: #333;
   z-index: 1;
   opacity: 1;
+  border: 15px solid #3aadff;
 }
